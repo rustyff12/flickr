@@ -1,3 +1,29 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* font-family: "Montserrat", sans-serif; */
 /* Media queries */
 /* Medium - 700px */
-/* Large - 1000px */
+/* Large - 900px */
+/* X Large - 1200px */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.hidden-until-xl {
+    display: none;
+}
+@media screen and (min-width: 1200px) {
+    .hidden-until-xl {
+        display: flex;
+    }
+    .hide-small {
+        display: none;
+    }
+}
