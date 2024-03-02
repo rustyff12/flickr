@@ -18,107 +18,126 @@
         />
     </head>
     <body>
-        <section class="main-container">
-            <header class="header">
-                <div class="header-logo">Logo</div>
-                <div class="header-center hidden-until-xl">
-                    <!-- Center -->
-                    <label for="search"
-                        ><i class="fa-solid fa-magnifying-glass"></i
-                    ></label>
-                    <input
-                        type="text"
-                        placeholder="Photos, people, or groups"
-                    />
+        <div class="large-screens">
+            <section class="main-container">
+                <header class="header">
+                    <div class="header-logo">Logo</div>
+                    <div class="header-center hidden-until-xl">
+                        <!-- Center -->
+                        <label for="search"
+                            ><i class="fa-solid fa-magnifying-glass"></i
+                        ></label>
+                        <input
+                            type="text"
+                            placeholder="Photos, people, or groups"
+                        />
+                    </div>
+                    <div class="header-right">
+                        <!-- a - log in, button sign up -->
+                        <ul>
+                            <li class="header-right-search hide-large">
+                                <a href="#"
+                                    ><i class="fa-solid fa-magnifying-glass"></i
+                                ></a>
+                            </li>
+                            <li class="header-btn-link">
+                                <a href="#">Log In</a>
+                            </li>
+                            <li class="header-sign-up hide-small">
+                                <a href="#">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="main-content">
+                    <h1 class="main-content-title">Find your inspiration.</h1>
+                    <h3 class="main-content-text hide-small">
+                        Join the Flickr community, home to tens of billions of
+                        photos and 2 million groups.
+                    </h3>
+                    <!-- Button -->
+                    <a href="#" class="main-content-btn">Start for free</a>
                 </div>
-                <div class="header-right">
-                    <!-- a - log in, button sign up -->
+            </section>
+            <section class="bottom-container">
+                <div class="bottom-container__links">
                     <ul>
-                        <li class="header-right-search hide-large">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <li class="bottom-container-item">
+                            <a href="#">About</a>
                         </li>
-                        <li class="header-btn-link">
-                            <a href="#">Log In</a>
+                        <li class="bottom-container-item">
+                            <a href="#">Jobs</a>
                         </li>
-                        <li class="header-sign-up hide-small">
-                            <a href="#">Sign Up</a>
+                        <li class="bottom-container-item">
+                            <a href="#">Blog</a>
                         </li>
-                    </ul>
-                </div>
-            </header>
-
-            <div class="main-content">
-                <h1 class="main-content-title">Find your inspiration.</h1>
-                <h3 class="main-content-text hide-small">
-                    Join the Flickr community, home to tens of billions of
-                    photos and 2 million groups.
-                </h3>
-                <!-- Button -->
-                <a href="#" class="main-content-btn">Start for free</a>
-            </div>
-        </section>
-        <section class="bottom-container">
-            <div class="bottom-container__links">
-                <ul>
-                    <li class="bottom-container-item"><a href="#">About</a></li>
-                    <li class="bottom-container-item"><a href="#">Jobs</a></li>
-                    <li class="bottom-container-item"><a href="#">Blog</a></li>
-                    <li class="bottom-container-item">
-                        <a href="#">Advertise</a>
-                    </li>
-                    <li class="bottom-container-item">
-                        <a href="#">Developers</a>
-                    </li>
-                    <li class="bottom-container-item">
-                        <a href="#">Guidelines</a>
-                    </li>
-                    <li class="bottom-container-item">
-                        <a href="#">Privacy</a>
-                    </li>
-                    <li class="bottom-container-item"><a href="#">Terms</a></li>
-                    <li class="bottom-container-item">
-                        <a href="#">Help forum</a>
-                    </li>
-                    <!-- Needs dropdown -->
-                    <li class="bottom-container-item">
-                        <a href="#">English</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bottom-container__socials">
-                <!-- Socials -->
-                <div class="bottom-container-first hide-small">
-                    <ul>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-                <div class="bottom-container-second">
-                    <span><a href="'">SmogMug+Flickr.</a></span
-                    ><span>Connecting people through photography</span>
-                </div>
-                <div class="bottom-container-third">
-                    <ul class="bottom-container-third-links">
-                        <!-- Facebook -->
-                        <li>
-                            <a href="#"
-                                ><i class="fa-brands fa-square-facebook"></i
-                            ></a>
+                        <li class="bottom-container-item">
+                            <a href="#">Advertise</a>
                         </li>
-                        <!-- Twitter -->
-                        <li>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <li class="bottom-container-item">
+                            <a href="#">Developers</a>
                         </li>
-                        <!-- Instagram -->
-                        <li>
-                            <a href="#"
-                                ><i class="fa-brands fa-instagram"></i
-                            ></a>
+                        <li class="bottom-container-item">
+                            <a href="#">Guidelines</a>
+                        </li>
+                        <li class="bottom-container-item">
+                            <a href="#">Privacy</a>
+                        </li>
+                        <li class="bottom-container-item">
+                            <a href="#">Terms</a>
+                        </li>
+                        <li class="bottom-container-item">
+                            <a href="#">Help forum</a>
+                        </li>
+                        <!-- Needs dropdown -->
+                        <li class="bottom-container-item">
+                            <a href="#">English</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </section>
+                <div class="bottom-container__socials">
+                    <!-- Socials -->
+                    <div class="bottom-container-first hide-small">
+                        <ul>
+                            <li class="bottom-container-first-links">
+                                <a href="#">Privacy</a>
+                            </li>
+                            <li class="bottom-container-first-links">
+                                <a href="#">Terms</a>
+                            </li>
+                            <li class="bottom-container-first-links">
+                                <a href="#">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-container-second">
+                        <p><a href="'">SmogMug+Flickr.</a></p>
+                        <p>Connecting people through photography</p>
+                    </div>
+                    <div class="bottom-container-third">
+                        <ul class="bottom-container-third-links">
+                            <!-- Facebook -->
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-square-facebook"></i
+                                ></a>
+                            </li>
+                            <!-- Twitter -->
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-twitter"></i
+                                ></a>
+                            </li>
+                            <!-- Instagram -->
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-instagram"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     </body>
 </html>

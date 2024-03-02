@@ -37,7 +37,7 @@ a {
 }
 
 .main-container {
-    height: 100dvh;
+    height: 100svh;
     width: 100%;
     background-image: url("../img/mobile/mount_stars.jpg");
     background-size: cover;
@@ -72,10 +72,19 @@ a {
     display: flex;
     align-items: center;
 }
-
 .header-right-search {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.header-right-log-in {
+
+.header-right-search a {
+    color: var(--clr-white);
+    font-size: 24px;
 }
 
 .header-btn-link {
@@ -86,6 +95,25 @@ a {
 
 .header-btn-link a {
     color: var(--clr-white);
+}
+
+.header-sign-up {
+    background-color: var(--clr-white);
+    font-size: 16px;
+    min-width: 80px;
+    height: 32px;
+    padding: 0 20px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--clr-dark);
+    font-weight: 700;
+    border: 1px solid var(--clr-white);
+    border-radius: 3px;
+}
+
+.header-sign-up a {
+    color: var(--clr-black);
 }
 
 .hide-small {
@@ -99,7 +127,7 @@ a {
 /* Main Content */
 .main-content {
     /* background-color: brown; */
-    height: calc(100dvh - 64px);
+    height: calc(100svh - 64px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +149,7 @@ a {
     align-items: center;
     color: var(--clr-dark);
     font-weight: 700;
-    border: 1px solid var(--clr-dark);
+    border: 1px solid var(--clr-white);
     border-radius: 3px;
 }
 
@@ -161,13 +189,15 @@ a {
 } */
 
 .bottom-container-second {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    padding: 0;
+    margin: 0;
     text-align: center;
-    /* background-color: burlywood; */
+    line-height: 10px;
     color: var(--clr-light);
 }
-
+/* .bottom-container-second p{
+} */
 .bottom-container-second a {
     color: var(--clr-light);
 }
@@ -189,6 +219,106 @@ a {
         font-size: 3.5rem;
     }
 }
+/* Tablet */
+@media screen and (min-width: 700px) {
+    .main-container {
+        height: 85vh;
+    }
+    .large-screens {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .hide-small {
+        display: flex;
+    }
+
+    .header-btn-link {
+        margin-left: 24px;
+        padding: 5px 10px;
+        border: none;
+    }
+
+    .main-content {
+        height: calc(100svh - 64px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 1;
+        padding-top: 150px;
+    }
+
+    .main-content-text {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        padding: 2rem;
+    }
+    /* Bottom */
+    .bottom-container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-black);
+        padding: 0 10px;
+
+        font-size: 14px;
+        height: 100%;
+    }
+
+    .bottom-container__links ul {
+        padding: 0 10px;
+        /* background-color: burlywood; */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid var(--clr-light);
+    }
+
+    .bottom-container__links .bottom-container-item {
+        padding: 8px 0px 16px 0px;
+        border-bottom: none;
+    }
+    .bottom-container-item a {
+        color: var(--clr-light);
+    }
+
+    /* Bottom - third */
+    .bottom-container__socials {
+        /* background-color: brown; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+    }
+    .bottom-container-first {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .bottom-container-first ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding: 10px 0;
+        margin: 0 20px;
+    }
+
+    .bottom-container-first-links a {
+        color: var(--clr-light);
+    }
+}
+
+@media screen and (min-width: 830px) {
+    /* Bottom - second */
+    .bottom-container-second {
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .hidden-until-xl {
         display: flex;
