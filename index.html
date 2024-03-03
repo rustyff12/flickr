@@ -3,12 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Find your inspiration. | Flickr</title>
-        <!-- External CSS -->
+        <title>Document</title>
         <link rel="stylesheet" href="./assets/css/normalize.css" />
         <link rel="stylesheet" href="./assets/css/main.css" />
-        <!-- External fonts -->
-        <!-- Font awesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,126 +15,71 @@
         />
     </head>
     <body>
-        <div class="large-screens">
-            <section class="main-container">
-                <header class="header">
-                    <div class="header-logo">Logo</div>
-                    <div class="header-center hidden-until-xl">
-                        <!-- Center -->
-                        <label for="search"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                        ></label>
-                        <input
-                            type="text"
-                            placeholder="Photos, people, or groups"
-                        />
-                    </div>
-                    <div class="header-right">
-                        <!-- a - log in, button sign up -->
-                        <ul>
-                            <li class="header-right-search hide-large">
-                                <a href="#"
-                                    ><i class="fa-solid fa-magnifying-glass"></i
-                                ></a>
-                            </li>
-                            <li class="header-btn-link">
-                                <a href="#">Log In</a>
-                            </li>
-                            <li class="header-sign-up hide-small">
-                                <a href="#">Sign Up</a>
-                            </li>
-                        </ul>
-                    </div>
-                </header>
-                <div class="main-content">
-                    <h1 class="main-content-title">Find your inspiration.</h1>
-                    <h3 class="main-content-text hide-small">
-                        Join the Flickr community, home to tens of billions of
-                        photos and 2 million groups.
-                    </h3>
-                    <!-- Button -->
-                    <a href="#" class="main-content-btn">Start for free</a>
+        <section class="main-container">
+            <header>
+                <div class="logo">Logo</div>
+                <div class="search_hidden">
+                    <label for="search_box"
+                        ><i class="fa-solid fa-magnifying-glass"></i
+                    ></label>
+                    <input
+                        type="text"
+                        id="search_box"
+                        placeholder="Photos, people, or groups"
+                    />
                 </div>
-            </section>
-            <section class="bottom-container">
-                <div class="bottom-container__links">
-                    <ul>
-                        <li class="bottom-container-item">
-                            <a href="#">About</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Jobs</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Blog</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Advertise</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Developers</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Guidelines</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Privacy</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Terms</a>
-                        </li>
-                        <li class="bottom-container-item">
-                            <a href="#">Help forum</a>
-                        </li>
-                        <!-- Needs dropdown -->
-                        <li class="bottom-container-item">
-                            <a href="#">English</a>
-                        </li>
-                    </ul>
+                <div class="header-buttons">
+                    <a href="#" id="search_small"
+                        ><i class="fa-solid fa-magnifying-glass"></i
+                    ></a>
+                    <a href="#"> Log In</a>
+                    <a href="#" class="btn">Sign Up</a>
                 </div>
-                <div class="bottom-container__socials">
-                    <!-- Socials -->
-                    <div class="bottom-container-first hide-small">
-                        <ul>
-                            <li class="bottom-container-first-links">
-                                <a href="#">Privacy</a>
-                            </li>
-                            <li class="bottom-container-first-links">
-                                <a href="#">Terms</a>
-                            </li>
-                            <li class="bottom-container-first-links">
-                                <a href="#">Cookies</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bottom-container-second">
-                        <p><a href="'">SmogMug+Flickr.</a></p>
-                        <p>Connecting people through photography</p>
-                    </div>
-                    <div class="bottom-container-third">
-                        <ul class="bottom-container-third-links">
-                            <!-- Facebook -->
-                            <li>
-                                <a href="#"
-                                    ><i class="fa-brands fa-square-facebook"></i
-                                ></a>
-                            </li>
-                            <!-- Twitter -->
-                            <li>
-                                <a href="#"
-                                    ><i class="fa-brands fa-twitter"></i
-                                ></a>
-                            </li>
-                            <!-- Instagram -->
-                            <li>
-                                <a href="#"
-                                    ><i class="fa-brands fa-instagram"></i
-                                ></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </header>
+
+            <main>
+                <h1>Find your inspiration.</h1>
+                <h3>
+                    Join the Flickr community, home to tens of billions of
+                    photos and 2 million groups.
+                </h3>
+                <a href="#" class="btn">Start for free</a>
+            </main>
+        </section>
+        <footer>
+            <div class="footer__left">
+                <a href="#" id="footer-link-1">About</a>
+                <a href="#" id="footer-link-2">Jobs</a>
+                <a href="#" id="footer-link-3">Blog</a>
+                <a href="#" id="footer-link-4">Developers</a>
+                <a href="#" id="footer-link-5">Guidelines</a>
+                <a href="#" id="footer-link-6">Help</a>
+                <a href="#" id="footer-link-7">Help Forum</a>
+                <a href="#" id="footer-link-8">Privacy</a>
+                <a href="#" id="footer-link-9">Terms</a>
+                <a href="#" id="footer-link-10">Cookies</a>
+                <a href="#" id="footer-link-11">English</a>
+            </div>
+            <div class="footer__middle">
+                <a id="footer-slogan" href="#">SmugMug+Flickr.</a>
+                <p class="footer-text-hidden">
+                    Connecting people through photography
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <!-- Facebook -->
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="#">
+                    <!-- Twitter -->
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <!-- Instagram -->
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </footer>
     </body>
 </html>
