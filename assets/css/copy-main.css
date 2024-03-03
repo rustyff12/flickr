@@ -18,10 +18,10 @@
     /* extra-large
 
     */
-    --fs-h1: 2rem;
-    --fs-main-btn: 1.3rem;
+    --fs-h1: 1.7rem;
+    --fs-main-btn: 1rem;
     --fs-main-a: 0.9rem;
-    --fs-footer-a: 0.9rem;
+    --fs-footer-a: 0.7rem;
 }
 @media screen and (min-width: 700px) {
     :root {
@@ -147,101 +147,39 @@ main a.btn {
 footer {
     width: 100%;
     background: var(--clr-black);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, 1fr) 1.5fr 1.3fr;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     height: auto;
     padding: 15px;
     text-align: center;
 }
 
-#link-1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#link-2 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#link-3 {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-#link-4 {
-    grid-area: 4 / 1 / 5 / 2;
-}
-
-#link-5 {
-    grid-area: 5 / 1 / 6 / 2;
-}
-
-#link-6 {
-    grid-area: 6 / 1 / 7 / 2;
-}
-
-#link-9 {
-    grid-area: 7 / 1 / 8 / 2;
-}
-
-#link-10 {
-    grid-area: 8 / 1 / 9 / 2;
-}
-
-#link-8 {
-    grid-area: 9 / 1 / 10 / 2;
-}
-
-#link-12 {
-    grid-area: 10 / 1 / 11 / 2;
-}
-
-#footer-slogan {
-    align-self: flex-end;
-    grid-area: 11 / 1 / 12 / 2;
-}
-
-.social-icons {
-    align-self: center;
-    grid-area: 12 / 1 / 13 / 2;
-    display: flex;
-    justify-content: center;
-    gap: 1.3rem;
-}
-
-.social-icons a {
-    font-size: 1.2rem;
-}
-
-.footer-text-hidden {
-    display: block;
-}
 footer a,
-.footer-text-hidden {
+footer .footer__middle .footer-text-hidden {
     color: var(--clr-light);
     font-size: var(--fs-footer-a);
 }
-#link-7,
-#link-11 {
-    display: none;
-}
 
-#link-1,
-#link-2,
-#link-3,
-#link-4,
-#link-5,
-#link-6,
-#link-8,
-#link-9,
-#link-10,
-#link-12 {
-    border-bottom: 1px solid var(--clr-lighter);
+footer .footer__left {
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    padding: 10px 0;
 }
 
+footer .footer__left a {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--clr-lighter);
+}
+
+footer .footer__middle {
+    padding: 15px 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
 @media screen and (min-width: 700px) {
     /* Header */
     header .header-buttons .btn {
