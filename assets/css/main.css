@@ -7,18 +7,11 @@
     --clr-white: rgb(243, 245, 246);
     --clr-light: rgba(255, 255, 255, 0.6);
     --clr-lighter: rgba(255, 255, 255, 0.2);
-    --clr-dark: rgb(33, 33, 36);
+    --clr-dark: rgba(33, 33, 36, 0.5);
     --clr-black: rgb(0, 0, 0);
     --clr-black-soft: rgba(0, 0, 0, 0.2);
-    /* Media queries */
-    /* Medium - 700px */
-    /* Large - 900px */
-    /* X Large - 1200px */
-    /* Font-sizes */
-    /* extra-large
 
-    */
-    --fs-h1: 2rem;
+    --fs-h1: 2.5rem;
     --fs-main-btn: 1.3rem;
     --fs-main-a: 0.9rem;
     --fs-footer-a: 0.9rem;
@@ -28,16 +21,15 @@
         --fs-h1: 3rem;
         --fs-h3: 1.7rem;
         --fs-main-btn: 1.5rem;
-        --fs-main-a: 0.7rem;
     }
 }
 /* X Large */
 @media screen and (min-width: 1200px) {
     :root {
         --fs-h1: 4rem;
-        --fs-h3: 2rem;
+        --fs-h3: 2.5rem;
         --fs-main-btn: 1.7rem;
-        --fs-main-a: 0.5rem;
+        --fs-main-a: 0.9rem;
     }
 }
 
@@ -67,6 +59,11 @@ body a.btn {
     font-weight: 700;
     border-radius: 3px;
 }
+
+body a.btn:hover {
+    color: var(--clr-dark);
+}
+
 /* Main-container */
 .main-container {
     background-image: url("../img/mobile/mount_stars.jpg");
@@ -131,11 +128,13 @@ main {
 main h1 {
     font-size: var(--fs-h1);
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 main h3 {
     display: none;
     font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 main a.btn {
@@ -157,43 +156,43 @@ footer {
     text-align: center;
 }
 
-#link-1 {
+#about {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-#link-2 {
+#jobs {
     grid-area: 2 / 1 / 3 / 2;
 }
 
-#link-3 {
+#blog {
     grid-area: 3 / 1 / 4 / 2;
 }
 
-#link-4 {
+#advertise {
     grid-area: 4 / 1 / 5 / 2;
 }
 
-#link-5 {
+#developers {
     grid-area: 5 / 1 / 6 / 2;
 }
 
-#link-6 {
+#guidelines {
     grid-area: 6 / 1 / 7 / 2;
 }
 
-#link-9 {
+#privacy {
     grid-area: 7 / 1 / 8 / 2;
 }
 
-#link-10 {
+#terms {
     grid-area: 8 / 1 / 9 / 2;
 }
 
-#link-8 {
+#help-forums {
     grid-area: 9 / 1 / 10 / 2;
 }
 
-#link-12 {
+#english {
     grid-area: 10 / 1 / 11 / 2;
 }
 
@@ -222,24 +221,36 @@ footer a,
     color: var(--clr-light);
     font-size: var(--fs-footer-a);
 }
-#link-7,
-#link-11 {
+#help,
+#cookies {
     display: none;
 }
 
-#link-1,
-#link-2,
-#link-3,
-#link-4,
-#link-5,
-#link-6,
-#link-8,
-#link-9,
-#link-10,
-#link-12 {
+#about,
+#jobs,
+#blog,
+#advertise,
+#developers,
+#guidelines,
+#help-forums,
+#privacy,
+#terms,
+#english {
     border-bottom: 1px solid var(--clr-lighter);
     text-align: left;
     padding: 10px 0;
+}
+
+.underline {
+    height: 1px;
+    background-color: var(--clr-lighter);
+    width: 100%;
+    margin-top: 5px;
+}
+@media screen and (max-width: 700px) {
+    .underline {
+        display: none; /* Hide the underline */
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -249,10 +260,19 @@ footer a,
     }
     header .header-buttons #log-in {
         border: none;
+        font-weight: 700;
+    }
+
+    header .header-buttons #log-in:hover {
+        color: var(--clr-black);
     }
 
     /* Main */
     .main-container {
+        background-image: url("../img/med/grass_med.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         height: 100vh;
     }
     .main-content {
@@ -287,45 +307,228 @@ footer a,
 
     /* Footer */
     footer {
+        width: 100%;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: 1fr 0.3fr 1.3fr;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: row;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        align-items: center;
         position: absolute;
         bottom: 0;
-        width: 100vw;
-        height: 15vh;
-        background: var(--clr-black);
+    }
+
+    #about {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #jobs {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    #blog {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    #advertise {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    #developers {
+        grid-area: 1 / 5 / 2 / 6;
+    }
+
+    #guidelines {
+        grid-area: 1 / 6 / 2 / 7;
+    }
+
+    #help {
+        grid-area: 1 / 7 / 2 / 8;
+    }
+
+    #help-forums {
+        grid-area: 1 / 8 / 2 / 9;
+    }
+
+    #english {
+        grid-area: 1 / 9 / 2 / 10;
+    }
+
+    #privacy {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #terms {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    #cookies {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+
+    #footer-slogan {
+        grid-area: 3 / 4 / 4 / 7;
+    }
+
+    .social-icons {
+        grid-area: 3 / 7 / 4 / 10;
+        align-self: center;
+
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        justify-content: center;
+        gap: 1.3rem;
+    }
+
+    .underline {
+        grid-area: 2 / 1 / 3 / 10;
+    }
+
+    #footer-slogan {
+        align-self: flex-end;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    .footer-text-hidden {
+        display: block;
+    }
+    footer a,
+    .footer-text-hidden {
+        color: var(--clr-light);
+        font-size: var(--fs-footer-a);
+    }
+    #help,
+    #cookies {
+        display: block;
+    }
+
+    #about,
+    #jobs,
+    #blog,
+    #advertise,
+    #developers,
+    #guidelines,
+    #help,
+    #help-forums,
+    #privacy,
+    #terms,
+    #cookies,
+    #english {
+        border-bottom: none;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .underline {
+        display: none; /* Hide the underline */
     }
     /* Footer */
     footer {
         width: 100%;
-        background: var(--clr-black);
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
     }
 
-    footer .footer__left {
-        flex-direction: row;
-        text-align: left;
+    #about {
+        grid-area: 1 / 1 / 2 / 2;
     }
 
-    footer .footer__left a {
-        padding: 10px 0;
+    #jobs {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    #blog {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    #advertise {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    #develpoers {
+        grid-area: 1 / 5 / 2 / 6;
+    }
+
+    #guidelines {
+        grid-area: 1 / 6 / 2 / 7;
+    }
+
+    #help {
+        grid-area: 1 / 7 / 2 / 8;
+    }
+
+    #help-forums {
+        grid-area: 1 / 8 / 2 / 9;
+    }
+
+    #privacy {
+        grid-area: 1 / 9 / 2 / 10;
+    }
+
+    #terms {
+        grid-area: 1 / 10 / 2 / 11;
+    }
+
+    #cookies {
+        grid-area: 1 / 11 / 2 / 12;
+    }
+
+    #english {
+        grid-area: 1 / 12 / 2 / 13;
+    }
+
+    #footer-slogan {
+        grid-area: 1 / 13 / 2 / 14;
+        align-self: center;
+    }
+
+    .social-icons {
+        grid-area: 1 / 14 / 2 / 16;
+        gap: 1.3rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    footer a {
+        color: var(--clr-light);
+        font-size: var(--fs-footer-a);
+    }
+    #help,
+    #cookies {
+        display: block;
+    }
+
+    #about,
+    #jobs,
+    #blog,
+    #advertise,
+    #developers,
+    #guidelines,
+    #help,
+    #help-forums,
+    #privacy,
+    #terms,
+    #cookies,
+    #english {
         border-bottom: none;
+        text-align: center;
+        padding: 0;
     }
 
-    footer .footer__middle {
-        padding: 15px 0;
-    }
-
-    footer .footer__middle .footer-text-hidden {
-        /* display: none; */
-    }
-
-    footer .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
+    .footer-text-hidden {
+        display: none;
     }
 }
+
 @media screen and (min-width: 1200px) {
     /* Header */
 
