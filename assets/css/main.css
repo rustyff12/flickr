@@ -27,7 +27,7 @@
 @media screen and (min-width: 1200px) {
     :root {
         --fs-h1: 4rem;
-        --fs-h3: 2.5rem;
+        --fs-h3: 2rem;
         --fs-main-btn: 1.7rem;
         --fs-main-a: 0.9rem;
     }
@@ -64,6 +64,13 @@ body a.btn:hover {
     color: var(--clr-dark);
 }
 
+.main-container .logo-img {
+    background-image: url("../icons/flickr_logo.svg");
+    background-size: cover;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
 /* Main-container */
 .main-container {
     background-image: url("../img/mobile/mount_stars.jpg");
@@ -82,7 +89,7 @@ body a.btn:hover {
     align-items: center;
     justify-content: space-between;
     background: var(--clr-black-soft);
-    padding: 15px;
+    padding: 15px 30px;
     height: 10vh;
     width: 100%;
     position: fixed;
@@ -98,7 +105,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 30px;
+    width: 50px;
     margin-right: 10px;
 }
 
@@ -113,6 +120,7 @@ header .header-buttons a {
 header .header-buttons .btn {
     display: none;
 }
+
 header .header-buttons #log-in {
     border: 2px solid var(--clr-white);
     padding: 5px 10px;
@@ -216,11 +224,17 @@ footer {
 .footer-text-hidden {
     display: block;
 }
+
 footer a,
 .footer-text-hidden {
     color: var(--clr-light);
     font-size: var(--fs-footer-a);
 }
+
+footer a:hover {
+    color: var(--clr-white);
+}
+
 #help,
 #cookies {
     display: none;
@@ -247,6 +261,7 @@ footer a,
     width: 100%;
     margin-top: 5px;
 }
+
 @media screen and (max-width: 700px) {
     .underline {
         display: none; /* Hide the underline */
@@ -258,9 +273,10 @@ footer a,
     header .header-buttons .btn {
         display: inline;
     }
+
     header .header-buttons #log-in {
         border: none;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     header .header-buttons #log-in:hover {
@@ -275,6 +291,7 @@ footer a,
         background-position: center;
         height: 100vh;
     }
+
     .main-content {
         position: absolute;
         top: 40%;
@@ -288,9 +305,11 @@ footer a,
     .main-content h1 {
         font-size: var(--fs-h1);
     }
+
     .main-content > * {
         margin-bottom: 1rem;
     }
+
     .main-content h3 {
         display: block;
         font-size: var(--fs-h3);
@@ -396,11 +415,13 @@ footer a,
     .footer-text-hidden {
         display: block;
     }
+
     footer a,
     .footer-text-hidden {
         color: var(--clr-light);
         font-size: var(--fs-footer-a);
     }
+
     #help,
     #cookies {
         display: block;
@@ -428,6 +449,7 @@ footer a,
     .underline {
         display: none; /* Hide the underline */
     }
+
     /* Footer */
     footer {
         width: 100%;
@@ -502,6 +524,7 @@ footer a,
         color: var(--clr-light);
         font-size: var(--fs-footer-a);
     }
+
     #help,
     #cookies {
         display: block;
@@ -573,7 +596,14 @@ footer a,
     header .header-buttons #search_small {
         display: none;
     }
+
     header .header-buttons a {
         margin-left: 1rem;
+    }
+
+    main a.btn {
+        font-size: var(--fs-main-btn);
+        font-weight: 700;
+        padding: 1rem 1.5rem;
     }
 }
