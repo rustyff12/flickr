@@ -64,15 +64,16 @@ body a.btn:hover {
     color: var(--clr-dark);
 }
 
-.main-container .logo-img {
+header .logo-img {
     background-image: url("../icons/flickr_logo.svg");
     background-size: cover;
     height: 3.5rem;
     width: 3.5rem;
 }
-/* background-image: url("../img/mobile/mount_stars.jpg"); */
+
 /* Main-container */
 .main-container {
+    background-image: url("../img/mobile/image-mobile-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,44 +81,40 @@ body a.btn:hover {
     height: 105svh;
     display: flex;
     position: relative;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.no-default-main-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 105svh;
+    display: flex;
+    position: relative;
+    transition: background-image 0.2s ease-in-out;
+    background-image: none;
 }
 
 /* Images */
 .image-mobile-1 {
-    background-image: url("../img/mobile/mount_dusk.jpg");
+    background-image: url("../img/mobile/image-mobile-1.jpg");
 }
 .image-mobile-2 {
-    background-image: url("../img/mobile/mount_stars.jpg");
+    background-image: url("../img/mobile/image-mobile-2.jpg");
 }
 .image-mobile-3 {
-    background-image: url("../img/mobile/sunset.jpg");
+    background-image: url("../img/mobile/image-mobile-3.jpg");
 }
 .image-mobile-4 {
-    background-image: url("../img/mobile/tree.jpg");
+    background-image: url("../img/mobile/image-mobile-4.jpg");
 }
 .image-mobile-5 {
-    background-image: url("../img/mobile/waterfall.jpg");
+    background-image: url("../img/mobile/image-mobile-5.jpg");
 }
-
-/* .image-med-1 {
-    background-image: url("../img/med/grass_med.jpg");
-}
-.image-med-2 {
-    background-image: url("../img/med/mount_grass_med.jpg");
-}
-.image-med-3 {
-    background-image: url("../img/med/mount_snow_stars_med.jpg");
-}
-.image-med-4 {
-    background-image: url("../img/med/person_sunset_med.jpg");
-}
-.image-med-5 {
-    background-image: url("../img/med/river_med.jpg");
-} */
 
 /* Header */
-.main-container header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -318,7 +315,14 @@ footer a:hover {
 
     /* Main */
     .main-container {
-        /* background-image: url("../img/med/grass_med.jpg"); */
+        background-image: url("../img/med/image-med-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .no-default-main-container {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -327,19 +331,19 @@ footer a:hover {
 
     /* Images */
     .image-med-1 {
-        background-image: url("../img/med/grass_med.jpg");
+        background-image: url("../img/med/image-med-1.jpg");
     }
     .image-med-2 {
-        background-image: url("../img/med/mount_grass_med.jpg");
+        background-image: url("../img/med/image-med-2.jpg");
     }
     .image-med-3 {
-        background-image: url("../img/med/mount_snow_stars_med.jpg");
+        background-image: url("../img/med/image-med-3.jpg");
     }
     .image-med-4 {
-        background-image: url("../img/med/person_sunset_med.jpg");
+        background-image: url("../img/med/image-med-4.jpg");
     }
     .image-med-5 {
-        background-image: url("../img/med/river_med.jpg");
+        background-image: url("../img/med/image-med-5.jpg");
     }
 
     .main-content {
@@ -603,22 +607,33 @@ footer a:hover {
 }
 
 @media screen and (min-width: 1200px) {
-    /* Images */
+    /* Main */
+    .main-container {
+        background-image: url("../img/large/image-large-1.jpg");
+    }
+
+    /* .no-default-main-container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    } */
+
     /* Images */
     .image-large-1 {
-        background-image: url("../img/large/grass_large.jpg");
+        background-image: url("../img/large/image-large-1.jpg");
     }
     .image-large-2 {
-        background-image: url("../img/large/mount_grass_large.jpg");
+        background-image: url("../img/large/image-large-2.jpg");
     }
     .image-large-3 {
-        background-image: url("../img/large/mount_snow_stars_large.jpg");
+        background-image: url("../img/large/image-large-3.jpg");
     }
     .image-large-4 {
-        background-image: url("../img/large/person_sunset_large.jpg");
+        background-image: url("../img/large/image-large-4.jpg");
     }
     .image-large-5 {
-        background-image: url("../img/large/river_large.jpg");
+        background-image: url("../img/large/image-large-5.jpg");
     }
 
     /* Header */
@@ -673,5 +688,9 @@ footer a:hover {
         font-size: var(--fs-main-btn);
         font-weight: 700;
         padding: 1rem 1.5rem;
+    }
+
+    .main-content {
+        max-width: 1100px;
     }
 }
